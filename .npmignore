@@ -1,3 +1,5 @@
 .idea
 .editorconfig
 *.yml
+rollup.config.js
+test/*
