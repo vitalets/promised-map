@@ -12,13 +12,18 @@ class PromisedMap {
   }
 
   wait(key) {
-    return new Promise((resolve, reject) => {
+    let {promise} = this._map.get(key) || {};
+    if (!promise) {
+      let resolve, reject;
+      promise = new Promise((res, rej) => [resolve, reject] = [res, rej]);
       this._map.set(key, {
+        promise,
         resolve,
         reject,
         timestamp: Date.now(),
       });
-    });
+    }
+    return promise;
   }
 
   resolve(key, value) {
