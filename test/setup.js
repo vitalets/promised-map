@@ -1,4 +1,5 @@
 const chai = require('chai');
+chai.assert.rejects = require('assert-rejects');
 const PromisedMap = require(process.env.LIB_PATH || '../src');
 
 chai.config.truncateThreshold = 0;
