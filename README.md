@@ -21,21 +21,20 @@ npm install promised-map
 
 ## Usage
 ```js
-const EventEmitter = require('events');
 const PromisedMap = require('promised-map');
 
-const emitter = new EventEmitter();
 const map = new PromisedMap();
 
-async function sendRequestAndWaitResponse(request) {
-  emitter.dispatch(request);
-  await map.wait(request.id);
-}
+const promise = map.wait('foo');
 
-emitter.on('response', response => map.resolve(response.id, response));
+// resolve by key
+map.resolve('foo', 42);
 
-sendRequestAndWaitResponse({id: '1', payload: 'foo'}); // => resolves when response arrives
+// reject by key
+map.reject('foo', new Error('error'));
 
+// check is promise still pending
+map.has('foo');
 ```
 
 ## License
