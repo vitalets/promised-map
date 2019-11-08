@@ -17,9 +17,9 @@
   "scripts": {
     "lint": "eslint src test",
     "test": "mocha test/setup test/specs",
-    "ci": "run-s lint test",
+    "ci": "npm run lint && npm test",
     "toc": "markdown-toc README.md -i",
-    "prerelease": "run-s lint test",
+    "prerelease": "npm run lint && npm test",
     "release": "npm version $VER && npm publish",
     "postrelease": "git push --follow-tags --no-verify",
     "release-patch": "VER=patch npm run release",
@@ -28,7 +28,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm test",
-      "pre-push": "run-s lint test"
+      "pre-push": "npm run lint && npm test"
     }
   },
   "lint-staged": {
