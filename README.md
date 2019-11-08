@@ -1,4 +1,5 @@
 # promised-map
+[![Actions Status](https://github.com/vitalets/promised-map/workflows/autotests/badge.svg)](https://github.com/vitalets/promised-map/actions)
 [![npm](https://img.shields.io/npm/v/promised-map.svg)](https://www.npmjs.com/package/promised-map)
 [![license](https://img.shields.io/npm/l/promised-map.svg)](https://www.npmjs.com/package/promised-map)
 
