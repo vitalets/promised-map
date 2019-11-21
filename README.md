@@ -36,6 +36,12 @@ map.reject('foo', new Error('error'));
 
 // check is promise still pending
 map.has('foo');
+
+// resolve all promises and clear map
+map.resolveAll('foo');
+
+// reject all promises and clear map
+map.rejectAll('foo');
 ```
 
 ## License
