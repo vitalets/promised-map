@@ -39,10 +39,10 @@ map.reject('foo', new Error('error'));
 map.has('foo');
 
 // resolve all promises and clear map
-map.resolveAll('foo');
+map.resolveAll(42);
 
 // reject all promises and clear map
-map.rejectAll('foo');
+map.rejectAll(new Error('error'));
 ```
 
 ## License
