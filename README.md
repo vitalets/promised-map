@@ -26,6 +26,7 @@ const PromisedMap = require('promised-map');
 
 const map = new PromisedMap();
 
+// create promise associated with key 'foo'
 const promise = map.wait('foo');
 
 // resolve by key
