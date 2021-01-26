@@ -26,6 +26,7 @@ const PromisedMap = require('promised-map');
 
 const map = new PromisedMap();
 
+// create promise associated with key 'foo'
 const promise = map.wait('foo');
 
 // resolve by key
@@ -36,6 +37,12 @@ map.reject('foo', new Error('error'));
 
 // check is promise still pending
 map.has('foo');
+
+// resolve all promises and clear map
+map.resolveAll(42);
+
+// reject all promises and clear map
+map.rejectAll(new Error('error'));
 ```
 
 ## License
