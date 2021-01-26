@@ -37,12 +37,12 @@
   "devDependencies": {
     "assert-rejects": "^1.0.0",
     "chai": "^4.2.0",
-    "eslint": "^6.6.0",
-    "eslint-plugin-mocha": "^6.2.1",
-    "husky": "^3.0.9",
-    "lint-staged": "^9.4.2",
+    "eslint": "^7.18.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
     "markdown-toc": "^1.2.0",
-    "mocha": "^6.2.2"
+    "mocha": "^8.2.1"
   },
   "keywords": [
     "promise",
