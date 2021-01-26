@@ -43,6 +43,9 @@ map.resolveAll(42);
 
 // reject all promises and clear map
 map.rejectAll(new Error('error'));
+
+// iterate all promises
+map.forEach(({ promise, resolve, reject, timestamp }, key) => { ... });
 ```
 
 ## License
