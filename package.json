@@ -1,6 +1,6 @@
 {
   "name": "promised-map",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A map of promises that can be resolved or rejected by key",
   "author": {
     "name": "Vitaliy Potapov",
