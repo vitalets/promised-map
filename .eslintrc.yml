@@ -1,14 +1,13 @@
-extends: eslint:recommended
+ignorePatterns: ["/**", "!/src", "!/test"]
 
-parserOptions:
-  ecmaVersion: 2018
-  impliedStrict: true
+parser: '@typescript-eslint/parser'
 
-env:
-  commonjs: true
-  browser: true
-  node: true
-  es6: true
+plugins:
+  - '@typescript-eslint'
+
+extends:
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/recommended'
 
 rules:
   complexity: [error, max: 5]
@@ -20,3 +19,6 @@ rules:
   max-lines: [error, {max: 200, skipComments: true, skipBlankLines: true}]
   semi: [error, always]
   space-before-function-paren: [error, {anonymous: always, named: never, asyncArrow: always}]
+
+  '@typescript-eslint/no-explicit-any': 0
+  '@typescript-eslint/explicit-module-boundary-types': 0
