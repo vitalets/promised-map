@@ -5,7 +5,8 @@
     "declaration": true,
     "strict": true,
     "sourceMap": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"]
 }

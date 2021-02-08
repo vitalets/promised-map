@@ -4,6 +4,7 @@
 [![license](https://img.shields.io/npm/l/promised-map.svg)](https://www.npmjs.com/package/promised-map)
 
 A map of promises that can be resolved or rejected by key.
+Once promise is resolved/rejected, related key/value pair is automatically removed from map.
 
 ## Contents
 
@@ -22,30 +23,30 @@ npm install promised-map
 
 ## Usage
 ```js
-const PromisedMap = require('promised-map');
+import { PromisedMap } from 'promised-map';
 
 const map = new PromisedMap();
 
-// create promise associated with key 'foo'
-const promise = map.wait('foo');
+// set key/value pair and retrieve related promise.
+const promise = map.set('foo', 42);
 
-// resolve by key
-map.resolve('foo', 42);
+// resolve promise later by key
+map.resolve('foo', 'bar');
 
-// reject by key
+// reject promise by key
 map.reject('foo', new Error('error'));
 
-// check is promise still pending
+// check if promise is still pending
 map.has('foo');
 
 // resolve all promises and clear map
-map.resolveAll(42);
+map.resolveAll('bar');
 
 // reject all promises and clear map
 map.rejectAll(new Error('error'));
 
 // iterate all promises
-map.forEach(({ promise, resolve, reject, timestamp }, key) => { ... });
+map.forEach((value, key) => { /* ... */ });
 ```
 
 ## License

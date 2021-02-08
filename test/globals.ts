@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import PromisedMap from '../src/index';
+import { PromisedMap } from '../src';
 
 type AssertType = typeof assert;
 type PromisedMapType = typeof PromisedMap;

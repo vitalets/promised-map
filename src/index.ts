@@ -1,6 +1,6 @@
 import { PromisedMapItem } from './item';
 
-export default class PromisedMap<K, V> {
+export class PromisedMap<K, V> {
   private map: Map<K, PromisedMapItem<V>> = new Map();
 
   /**
@@ -106,4 +106,3 @@ export default class PromisedMap<K, V> {
     return item as PromisedMapItem<V>;
   }
 }
-
