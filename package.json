@@ -2,6 +2,7 @@
   "name": "promised-map",
   "version": "0.3.0",
   "description": "A map of promises that can be resolved or rejected by key",
+  "type": "module",
   "main": "./dist/cjs/index.js",
   "exports": {
     "import": "./dist/esm/index.js",
@@ -14,7 +15,7 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "tsc && echo '{\"type\": \"module\"}' > dist/esm/package.json",
+    "build": "tsc",
     "build:cjs": "tsc --target es5 --outDir dist/cjs && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
     "build:all": "npm run build && npm run build:cjs",
     "typecheck": "tsc --noEmit",
