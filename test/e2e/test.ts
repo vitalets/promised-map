@@ -13,7 +13,7 @@ import { PromisedMap } from 'promised-map';
   console.log(`OK`);
 })();
 
-function assertEqual(actual, expected) {
+function assertEqual(actual: unknown, expected: unknown) {
   if (actual !== expected) {
     throw new Error(`"${actual}" !== "${expected}"`);
   }
